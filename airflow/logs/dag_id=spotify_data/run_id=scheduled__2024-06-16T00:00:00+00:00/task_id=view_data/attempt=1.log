@@ -1,0 +1,18 @@
+[2024-06-17T16:14:36.226-0400] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-17T16:14:36.248-0400] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spotify_data.view_data scheduled__2024-06-16T00:00:00+00:00 [queued]>
+[2024-06-17T16:14:36.257-0400] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spotify_data.view_data scheduled__2024-06-16T00:00:00+00:00 [queued]>
+[2024-06-17T16:14:36.257-0400] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-17T16:14:36.276-0400] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): view_data> on 2024-06-16 00:00:00+00:00
+[2024-06-17T16:14:36.287-0400] {standard_task_runner.py:63} INFO - Started process 248282 to run task
+[2024-06-17T16:14:36.291-0400] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'spotify_data', 'view_data', 'scheduled__2024-06-16T00:00:00+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/spotify_data.py', '--cfg-path', '/tmp/tmpsvwuzr8p']
+[2024-06-17T16:14:36.294-0400] {standard_task_runner.py:91} INFO - Job 5: Subtask view_data
+[2024-06-17T16:14:36.355-0400] {task_command.py:426} INFO - Running <TaskInstance: spotify_data.view_data scheduled__2024-06-16T00:00:00+00:00 [running]> on host andres-IdeaPad-3-14ALC6
+[2024-06-17T16:14:36.448-0400] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='airflow@example.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='spotify_data' AIRFLOW_CTX_TASK_ID='view_data' AIRFLOW_CTX_EXECUTION_DATE='2024-06-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-16T00:00:00+00:00'
+[2024-06-17T16:14:36.449-0400] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-17T16:14:36.473-0400] {spotify_data.py:39} INFO - {'error': {'status': 401, 'message': 'Invalid access token'}}
+[2024-06-17T16:14:36.473-0400] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-17T16:14:36.473-0400] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-17T16:14:36.482-0400] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=spotify_data, task_id=view_data, run_id=scheduled__2024-06-16T00:00:00+00:00, execution_date=20240616T000000, start_date=20240617T201436, end_date=20240617T201436
+[2024-06-17T16:14:36.505-0400] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-17T16:14:36.528-0400] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-17T16:14:36.529-0400] {local_task_job_runner.py:222} INFO - ::endgroup::

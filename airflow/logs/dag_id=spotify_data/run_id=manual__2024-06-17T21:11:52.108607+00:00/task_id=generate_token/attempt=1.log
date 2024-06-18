@@ -1,0 +1,17 @@
+[2024-06-17T17:11:55.374-0400] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-17T17:11:55.392-0400] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spotify_data.generate_token manual__2024-06-17T21:11:52.108607+00:00 [queued]>
+[2024-06-17T17:11:55.398-0400] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spotify_data.generate_token manual__2024-06-17T21:11:52.108607+00:00 [queued]>
+[2024-06-17T17:11:55.398-0400] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-17T17:11:55.413-0400] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): generate_token> on 2024-06-17 21:11:52.108607+00:00
+[2024-06-17T17:11:55.425-0400] {standard_task_runner.py:63} INFO - Started process 292619 to run task
+[2024-06-17T17:11:55.427-0400] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'spotify_data', 'generate_token', 'manual__2024-06-17T21:11:52.108607+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/spotify_data.py', '--cfg-path', '/tmp/tmp5vvt9d92']
+[2024-06-17T17:11:55.429-0400] {standard_task_runner.py:91} INFO - Job 59: Subtask generate_token
+[2024-06-17T17:11:55.468-0400] {task_command.py:426} INFO - Running <TaskInstance: spotify_data.generate_token manual__2024-06-17T21:11:52.108607+00:00 [running]> on host andres-IdeaPad-3-14ALC6
+[2024-06-17T17:11:55.516-0400] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='airflow@example.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='spotify_data' AIRFLOW_CTX_TASK_ID='generate_token' AIRFLOW_CTX_EXECUTION_DATE='2024-06-17T21:11:52.108607+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-17T21:11:52.108607+00:00'
+[2024-06-17T17:11:55.517-0400] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-17T17:11:56.473-0400] {python.py:237} INFO - Done. Returned value was: BQAPgRIPjO7tB3IGwD30ofozfKZ9HxWXtuuxpceQvDHgj--1oAH4hA24GOq6JARvxI8odwEe-T7CJTg3pHRdd_LIy2cNubUrs_CPLhXckR1As7TUVP4
+[2024-06-17T17:11:56.474-0400] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-17T17:11:56.494-0400] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=spotify_data, task_id=generate_token, run_id=manual__2024-06-17T21:11:52.108607+00:00, execution_date=20240617T211152, start_date=20240617T211155, end_date=20240617T211156
+[2024-06-17T17:11:56.526-0400] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-17T17:11:56.537-0400] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-17T17:11:56.540-0400] {local_task_job_runner.py:222} INFO - ::endgroup::
